@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Home">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        >
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.example.lokit.hush.MapsActivity" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/data"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:elevation="15dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:id="@+id/Head"
+            android:gravity="center"
+            android:textColor="@color/darkergrey"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="12dp"
+
+            android:text="Hello"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/Loctext"
+            android:layout_below="@+id/Head"
+            android:orientation="horizontal"
+            >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/Loctext1"
+            android:gravity="center"
+            android:text="Hello"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="-20dp"
+            android:layout_weight="5"
+            />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:id="@+id/Loctext2"
+                android:text="Hello"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="-20dp"
+                android:layout_weight="5"
+                />
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:id="@+id/Timetext"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="Hello"
+            android:layout_below="@+id/Loctext"
+            android:layout_alignParentStart="true" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Timetext"
+            android:id="@+id/weekstrip"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sun"
+                android:text="S"
+                android:textColor="@color/grey"
+                android:gravity="center"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mon"
+                android:text="M"
+                android:textColor="@color/grey"
+                android:gravity="center"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tue"
+                android:text="T"
+                android:textColor="@color/grey"
+                android:gravity="center"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/wed"
+                android:textColor="@color/grey"
+                android:gravity="center"
+                android:text="W"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/thu"
+                android:textColor="@color/grey"
+                android:gravity="center"
+                android:text="T"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fri"
+                android:textColor="@color/grey"
+                android:gravity="center"
+                android:text="F"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sat"
+                android:textColor="@color/grey"
+                android:gravity="center"
+                android:text="S"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/weekstrip"
+            android:id="@+id/delete"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_delete_black_36dp"
+
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/data"
+        android:visibility="gone"
+        android:id="@+id/overlay"
+        android:background="#00FFFFFF"
+        >
+
+    </RelativeLayout>
+</RelativeLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/ic_input_add" />
+
+</android.support.design.widget.CoordinatorLayout>

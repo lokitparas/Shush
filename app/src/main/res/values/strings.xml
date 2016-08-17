@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Shush</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="title_activity_maps">Map</string>
+    <string name="google_maps_key">AIzaSyB1dhgoqKsg9_zNNZCpNbzsSfyt3ibYxWU</string>
+    <string name="title_activity_maps2">Map</string>
+
+</resources>
